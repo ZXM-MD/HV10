@@ -4,19 +4,7 @@ RUN apt-get update && \
 
 apt-get install -y \
 
-nodejs \
-
 ffmpeg \
-
-wget \
-
-git \
-
-bash \
-
-python \
-
-python2
 
 imagemagick \
 
