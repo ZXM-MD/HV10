@@ -58,14 +58,14 @@ if (global.db) global.db.data = {
 }
 
 function title() {
-    console.log(chalk.bold.green(figlet.textSync('Haruka Bot', {
+    console.log(chalk.bold.green(figlet.textSync('Khoiyrul Botz', {
         font: 'Standard',
         horizontalLayout: 'default',
         verticalLayout: 'default',
         width: 80,
         whitespaceBreak: false
     })))
-    console.log(chalk.yellow(`\n${chalk.yellow('Created By Zeeone Ofc')}\n`))
+    console.log(chalk.yellow(`\n${chalk.yellow("Created By Pak Zainal Dev's")}\n`))
 }
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
@@ -103,7 +103,7 @@ const {
          }
          return message;
       },
-        browser: ['Haruka Multi Device','Safari','1.0.0'],
+        browser: ['Khoiyrul Botz Multi Device','Safari','1.0.0'],
         auth: state
     })
   if (haruka.user && haruka.user.id) haruka.user.jid = jidNormalizedUser(haruka.user.id)
@@ -246,7 +246,7 @@ app.use(express.static(path.join(__dirname, 'views')))
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await haruka.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:email@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://youtube.com/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haruka.getName(i + '@s.whatsapp.net')}\nFN:${await haruka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:hagozox@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://youtube.com/@hagozox\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	haruka.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
